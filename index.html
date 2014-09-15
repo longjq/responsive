@@ -5,6 +5,9 @@
 	<title>this is my first github app</title>
 	<link href="http://cdn.bootcss.com/normalize/3.0.1/normalize.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+	<script src="scripts/jquery.carouFredSel-5.5.2.js" type="text/javascript"></script>
+	<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -30,6 +33,22 @@
 	    	<h1>Hello there, I'm <span>&quot;Your Name&quot;</span>. Welcome to my design portfolio!</h1>
 	        <h2>&ndash; Photographer and Web Developer &ndash;</h2>
 	    </header>	<!-- Header Title End -->
+
+	    <section id="slideshow">
+	    	<div class="html_carousel">
+	    		<div id="slider">
+	    		<div class="slide">
+	    			<img src="image/slideshow/sliderimage1.jpg" width="3000" height="783" alt="sliderimage1">
+	    		</div>
+	    		<div class="slide">
+	    			<img src="image/slideshow/sliderimage2.jpg" width="3000" height="783" alt="sliderimage2">
+	    		</div>
+	    		<div class="slide">
+	    			<img src="image/slideshow/sliderimage3.jpg" width="3000" height="783" alt="sliderimage3">
+	    		</div>
+	    		</div>
+	    	</div>
+	    </section>
 
 
 		<aside class="left">
@@ -104,16 +123,46 @@
 
 	<footer id="footer">
 		<div class="wrapper">
-			<h3>This is the Future</h3>
 			<selection class="left">
 				<h4>Contact</h4>
+				<div class="formwrap">
+					<form action="" id="submitform">
+
+						<input type="text" class="formstyle" title="Name" name="name">
+
+						<input type="text" class="formstyle" title="Email" name="email" />
+
+						<textarea name="message" title="Message"></textarea>
+
+                        <input class="formstyletwo" type="submit" value="Send"> 
+					</form>
+				</div>
 			</selection>
-			<selection class="right">
-				<h4>Think is Different</h4>
+			<selection class="right social">
+				<section class="right social"> <!-- Social Icons Start -->
+					<a href="http://sc.chinaz.com"><img class="icon" src="image/icons/google.png" width="32" height="32" alt="google"></a><!-- Replace with any 32px x 32px icons -->
+			        <a href="http://sc.chinaz.com"><img class="icon" src="image/icons/youtube.png" width="32" height="32" alt="youtube"></a><!-- Replace with any 32px x 32px icons -->
+			        <a href="http://sc.chinaz.com"><img class="icon" src="image/icons/facebook.png" width="32" height="32" alt="facebook"></a><!-- Replace with any 32px x 32px icons -->
+			        <a href="http://sc.chinaz.com"><img class="icon" src="image/icons/twitter.png" width="32" height="32" alt="twitter"></a><!-- Replace with any 32px x 32px icons -->
+			        </section> <!-- Social Icons End -->
 			</selection>
 			<div class="clearfix"></div>
-
 		</div>
 	</footer>
+<script>
+$("#slider").carouFredSel({
+	responsive	: true,
+	scroll		: {
+		fx			: "crossfade",
+		easing		: "swing",
+		duration	: 1000,
+		
+	},
+	items		: {
+		visible		: 1,
+		height		: "27%"
+	}
+});
+</script>
 </body>
 </html>
